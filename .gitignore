@@ -1,0 +1,32 @@
+# Build Output
+/target/
+**/target/
+debug/
+
+# Rust Analyzer & IDE
+.rust-analyzer/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment & Secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Logs
+*.log
+logs/
+
+# Coverage
+*.profraw
+*.profdata
+coverage/
+tarpaulin-report.html
+
+# Temporary files
+tmp/
+temp/
