@@ -1,0 +1,18 @@
+[package]
+name = "s3-core"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.78.0"
+description = "Core domain types, error definitions, and XML models for S3 compatibility"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+quick-xml = { workspace = true }
+thiserror = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+
+[lints]
+workspace = true
