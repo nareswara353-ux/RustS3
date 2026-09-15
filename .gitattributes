@@ -1,6 +1,12 @@
 * text=auto eol=lf
-*.rs text eol=lf
-*.toml text eol=lf
-*.yml text eol=lf
+*.rs text diff=rust
+*.toml text
+*.yml text
+*.yaml text
 *.sh text eol=lf
 *.md text eol=lf
+Cargo.lock text
+.gitattributes text
+.gitignore text
+*.bin binary
+*.dat binary

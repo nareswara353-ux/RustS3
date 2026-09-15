@@ -1,32 +1,28 @@
-# Build Output
+# Build artifacts
 /target/
 **/target/
-debug/
 
-# Rust Analyzer & IDE
-.rust-analyzer/
+# Binary output
+/**/*.exe
+/**/*.dll
+/**/*.so
+/**/*.dylib
+
+# Test binaries
+/**/*.gcno
+/**/*.gcda
+
+# IDE specific
 .idea/
+.vscode/
 *.swp
 *.swo
 *~
-.DS_Store
 
-# Environment & Secrets
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Environment variables
 .env
 .env.local
-*.pem
-*.key
-
-# Logs
-*.log
-logs/
-
-# Coverage
-*.profraw
-*.profdata
-coverage/
-tarpaulin-report.html
-
-# Temporary files
-tmp/
-temp/
