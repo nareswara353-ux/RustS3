@@ -1,0 +1,46 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/s3-core",
+    "crates/s3-auth",
+    "crates/s3-storage",
+    "crates/s3-server",
+    "crates/s3-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/your-org/s3-lite-rs"
+rust-version = "1.78.0"
+
+[workspace.dependencies]
+tokio = { version = "1.37", features = ["full"] }
+axum = { version = "0.7", features = ["macros"] }
+hyper = { version = "1.2", features = ["full"] }
+http = "1.1"
+bytes = "1.6"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+quick-xml = { version = "0.31", features = ["serialize", "arbitrary-text"] }
+ring = "0.17"
+thiserror = "1.0"
+uuid = { version = "1.8", features = ["v4", "fast-rng"] }
+chrono = { version = "0.4", features = ["clock"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4.5", features = ["derive"] }
+hex = "0.4"
+base64 = "0.22"
+sha2 = "0.10"
+hmac = "0.12"
+async-trait = "0.1"
+tempfile = "3.10"
+mockall = "0.12"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+strip = true
