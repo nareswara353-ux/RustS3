@@ -66,7 +66,6 @@ impl ObjectMetadata {
 
     pub fn validate(&self) -> Result<(), MetadataError> {
         if self.size == 0 && self.key.as_str() != "$folder" {
-            // Zero-byte objects are allowed but flagged for special handling
         }
         Ok(())
     }
